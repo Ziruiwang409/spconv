@@ -22,7 +22,7 @@ endif()
 
 find_package(Torch REQUIRED)
 
-# add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
+add_definitions(-D__CUDA_NO_HALF_OPERATORS__)
 
 add_compile_definitions(SPCONV_CUDA)
 add_subdirectory(third_party/pybind11)
